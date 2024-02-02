@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <form name="calc" class="calculator">
-                <input type="text" radonly class="value"/>
+                <input type="text" readonly class="value"/>
                 <span class="num clear" onclick="calc.display.value = ''">C</span>
                 <span class="num" onClick="document.calc.display.value +='/'">/</span>
                 <span class="num" onClick="document.calc.display.value +='*'">*</span>
@@ -30,10 +30,7 @@
                 <span class="num" onClick="document.calc.display.value +='.'">.</span>
                 <span class="num" onClick="document.calc.display.value +='00'">00</span>
                 <span class="num" onClick="document.calc.display.value = eval(calc.display.value)">=</span>
-
-
             </form>
-
         </div>
     </body>
 </html>
