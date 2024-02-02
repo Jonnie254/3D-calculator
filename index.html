@@ -11,26 +11,27 @@
     <body>
         <div class="container">
             <form name="calc" class="calculator">
-                <input type="text" readonly class="value"/>
-                <span class="num clear" onclick="calc.display.value = ''">C</span>
-                <span class="num" onClick="document.calc.display.value +='/'">/</span>
-                <span class="num" onClick="document.calc.display.value +='*'">*</span>
-                <span class="num" onClick="document.calc.display.value +='7'">7</span>
-                <span class="num" onClick="document.calc.display.value +='8'">8</span>
-                <span class="num" onClick="document.calc.display.value +='9'">9</span>
-                <span class="num" onClick="document.calc.display.value +='-'">-</span>
-                <span class="num" onClick="document.calc.display.value +='4'">4</span>
-                <span class="num" onClick="document.calc.display.value +='5'">5</span>
-                <span class="num" onClick="document.calc.display.value +='6'">6</span>
-                <span class="num" onClick="document.calc.display.value +='+'">+</span>
-                <span class="num" onClick="document.calc.display.value +='1'">1</span>
-                <span class="num" onClick="document.calc.display.value +='2'">2</span>
-                <span class="num" onClick="document.calc.display.value +='3'">3</span>
-                <span class="num" onClick="document.calc.display.value +='0'">0</span>
-                <span class="num" onClick="document.calc.display.value +='.'">.</span>
-                <span class="num" onClick="document.calc.display.value +='00'">00</span>
-                <span class="num" onClick="document.calc.display.value = eval(calc.display.value)">=</span>
+                <input type="text" readonly name="display" class="value"/>
+                <span class="num clear" onclick="clearDisplay()">C</span>
+                <span class="num" onclick="appendCharacter('/')">/</span>
+                <span class="num" onclick="appendCharacter('*')">*</span>
+                <span class="num" onclick="appendCharacter('7')">7</span>
+                <span class="num" onclick="appendCharacter('8')">8</span>
+                <span class="num" onclick="appendCharacter('9')">9</span>
+                <span class="num" onclick="appendCharacter('-')">-</span>
+                <span class="num" onclick="appendCharacter('4')">4</span>
+                <span class="num" onclick="appendCharacter('5')">5</span>
+                <span class="num" onclick="appendCharacter('6')">6</span>
+                <span class="num" onclick="appendCharacter('+')">+</span>
+                <span class="num" onclick="appendCharacter('1')">1</span>
+                <span class="num" onclick="appendCharacter('2')">2</span>
+                <span class="num" onclick="appendCharacter('3')">3</span>
+                <span class="num" onclick="appendCharacter('0')">0</span>
+                <span class="num" onclick="appendCharacter('.')">.</span>
+                <span class="num" onclick="appendCharacter('00')">00</span>
+                <span class="num" onclick="calculateResult()">=</span>
             </form>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>
